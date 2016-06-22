@@ -7,12 +7,17 @@ public class CameraControl : MonoBehaviour
     float rotationX;
     float rotationY;
 
+	PlayerState playerState = null;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+		playerState = GetComponentInParent<PlayerState>();	
     }
     void Update()
     {
+		if (playerState.isDead)
+			return;
         float mouseMoveValueX = Input.GetAxis("Mouse X");
         float mouseMoveValueY = Input.GetAxis("Mouse Y");
 

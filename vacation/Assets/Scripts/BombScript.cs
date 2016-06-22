@@ -26,7 +26,7 @@ public class BombScript : MonoBehaviour
 			isOnFloor = true;
 		else
 			isOnFloor = false;
-		if (currentCol < 2)
+		if (currentCol < 2 && !other.gameObject.name.Contains("Enemy"))
 		{
 			currentCol++;
 			return;

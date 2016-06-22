@@ -8,10 +8,17 @@ public class FireScript : MonoBehaviour {
     [Range(5.0f,50.0f)]
     public float forwardPower = 20.0f;
     public float upPower = 5.0f;
+	PlayerState playerState = null;
 
+	void Start()
+	{
+		playerState = GetComponent<PlayerState>();
+	}
 	// Update is called once per frame
 	void Update ()
     {
+		if (playerState.isDead)
+			return;
         if (Input.GetButtonDown("Fire1"))
         {
             GameObject obj = Instantiate(fireObject) as GameObject;
