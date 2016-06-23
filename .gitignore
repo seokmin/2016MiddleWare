@@ -20,7 +20,7 @@ ExportedObj/
 */Temp/*
 */ScriptAssemblies/*
 # Unity3D generated meta files
-*/metadata/*
+vacation/Library/metadata/*
 *.pidb.meta
 
 # Unity3D Generated File On Crash Reports
